@@ -1,0 +1,178 @@
+[
+  {
+    "name": "orderless-components",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ]
+    },
+    "collection": [
+      "find-file",
+      "find-file-other-window",
+      "file-cache-add-file",
+      "kill-buffer",
+      "buffer-menu",
+      "switch-to-buffer"
+    ],
+    "keys": [
+      "f",
+      "i",
+      "l",
+      "SPC",
+      "o",
+      "t",
+      "DEL",
+      "DEL",
+      "DEL",
+      "b",
+      "u",
+      "f",
+      "C-n",
+      "RET"
+    ]
+  },
+  {
+    "name": "orderless-regexp",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ]
+    },
+    "collection": [
+      "alpha-beta",
+      "beta-alpha",
+      "gamma",
+      "alphabet"
+    ],
+    "keys": [
+      "^",
+      "a",
+      "l",
+      "SPC",
+      "b",
+      "e",
+      "t",
+      "$",
+      "RET"
+    ]
+  },
+  {
+    "name": "orderless-smart-case",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ]
+    },
+    "collection": [
+      "Makefile",
+      "makefile.am",
+      "README",
+      "readme.org"
+    ],
+    "keys": [
+      "m",
+      "a",
+      "k",
+      "DEL",
+      "DEL",
+      "DEL",
+      "M",
+      "RET"
+    ]
+  },
+  {
+    "name": "file-partial",
+    "reader": "file",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ],
+      "completion-category-overrides": [
+        [
+          "file",
+          [
+            "styles",
+            "partial-completion"
+          ]
+        ]
+      ]
+    },
+    "files": [
+      "alpha.txt",
+      "alps.org",
+      "beta/",
+      "beta/inner.txt",
+      "notes.org"
+    ],
+    "keys": [
+      "a",
+      "l",
+      "TAB",
+      "DEL",
+      "DEL",
+      "b",
+      "TAB",
+      "i",
+      "RET"
+    ]
+  },
+  {
+    "name": "file-directory-preselect",
+    "reader": "file",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ],
+      "completion-category-overrides": [
+        [
+          "file",
+          [
+            "styles",
+            "partial-completion"
+          ]
+        ]
+      ]
+    },
+    "files": [
+      "src/",
+      "src/main.rs",
+      "src/lib.rs",
+      "README"
+    ],
+    "keys": [
+      "s",
+      "r",
+      "c",
+      "/",
+      "C-n",
+      "RET"
+    ]
+  },
+  {
+    "name": "file-orderless",
+    "reader": "file",
+    "vars": {
+      "completion-styles": [
+        "orderless",
+        "basic"
+      ]
+    },
+    "files": [
+      "alpha.txt",
+      "alps.org",
+      "notes.org",
+      "beta/"
+    ],
+    "keys": [
+      "o",
+      "r",
+      "g",
+      "RET"
+    ]
+  }
+]

@@ -1,0 +1,308 @@
+{
+  "cases": [
+    {
+      "name": "orderless-components",
+      "states": [
+        {
+          "input": "",
+          "before": "1/6    ",
+          "after": " \nfind-file\nbuffer-menu\nkill-buffer\nswitch-to-buffer\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "f",
+          "before": "1/6    ",
+          "after": " \nfind-file\nbuffer-menu\nkill-buffer\nswitch-to-buffer\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "fi",
+          "before": "1/3    ",
+          "after": " \nfind-file\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "fil",
+          "before": "1/3    ",
+          "after": " \nfind-file\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "fil ",
+          "before": "1/3    ",
+          "after": " \nfind-file\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "fil o",
+          "before": "1/1    ",
+          "after": " \nfind-file-other-window\n"
+        },
+        {
+          "input": "fil ot",
+          "before": "1/1    ",
+          "after": " \nfind-file-other-window\n"
+        },
+        {
+          "input": "fil o",
+          "before": "1/1    ",
+          "after": " \nfind-file-other-window\n"
+        },
+        {
+          "input": "fil ",
+          "before": "1/3    ",
+          "after": " \nfind-file\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "fil",
+          "before": "1/3    ",
+          "after": " \nfind-file\nfile-cache-add-file\nfind-file-other-window\n"
+        },
+        {
+          "input": "filb",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "input": "filbu",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "input": "filbuf",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "input": "filbuf",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "exited": true,
+          "answer": "filbuf"
+        }
+      ]
+    },
+    {
+      "name": "orderless-regexp",
+      "states": [
+        {
+          "input": "",
+          "before": "1/4    ",
+          "after": " \ngamma\nalphabet\nalpha-beta\nbeta-alpha\n"
+        },
+        {
+          "input": "^",
+          "before": "1/4    ",
+          "after": " \ngamma\nalphabet\nalpha-beta\nbeta-alpha\n"
+        },
+        {
+          "input": "^a",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al ",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al b",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al be",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al bet",
+          "before": "1/2    ",
+          "after": " \nalphabet\nalpha-beta\n"
+        },
+        {
+          "input": "^al bet$",
+          "before": "1/1    ",
+          "after": " \nalphabet\n"
+        },
+        {
+          "exited": true,
+          "answer": "alphabet"
+        }
+      ]
+    },
+    {
+      "name": "orderless-smart-case",
+      "states": [
+        {
+          "input": "",
+          "before": "1/4    ",
+          "after": " \nREADME\nMakefile\nreadme.org\nmakefile.am\n"
+        },
+        {
+          "input": "m",
+          "before": "1/4    ",
+          "after": " \nREADME\nMakefile\nreadme.org\nmakefile.am\n"
+        },
+        {
+          "input": "ma",
+          "before": "1/2    ",
+          "after": " \nMakefile\nmakefile.am\n"
+        },
+        {
+          "input": "mak",
+          "before": "1/2    ",
+          "after": " \nMakefile\nmakefile.am\n"
+        },
+        {
+          "input": "ma",
+          "before": "1/2    ",
+          "after": " \nMakefile\nmakefile.am\n"
+        },
+        {
+          "input": "m",
+          "before": "1/4    ",
+          "after": " \nREADME\nMakefile\nreadme.org\nmakefile.am\n"
+        },
+        {
+          "input": "",
+          "before": "1/4    ",
+          "after": " \nREADME\nMakefile\nreadme.org\nmakefile.am\n"
+        },
+        {
+          "input": "M",
+          "before": "1/2    ",
+          "after": " \nREADME\nMakefile\n"
+        },
+        {
+          "exited": true,
+          "answer": "README"
+        }
+      ]
+    },
+    {
+      "name": "file-partial",
+      "states": [
+        {
+          "input": "DIR/file-partial/",
+          "before": "*/4    ",
+          "after": " \nbeta/\nalps.org\nalpha.txt\nnotes.org\n"
+        },
+        {
+          "input": "DIR/file-partial/a",
+          "before": "1/2    ",
+          "after": " \nalps.org\nalpha.txt\n"
+        },
+        {
+          "input": "DIR/file-partial/al",
+          "before": "1/2    ",
+          "after": " \nalps.org\nalpha.txt\n"
+        },
+        {
+          "input": "DIR/file-partial/alps.org",
+          "before": "1/1    ",
+          "after": " \nalps.org\n"
+        },
+        {
+          "input": "DIR/file-partial/alps.or",
+          "before": "1/1    ",
+          "after": " \nalps.org\n"
+        },
+        {
+          "input": "DIR/file-partial/alps.o",
+          "before": "1/1    ",
+          "after": " \nalps.org\n"
+        },
+        {
+          "input": "DIR/file-partial/alps.ob",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "input": "DIR/file-partial/alps.ob",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "input": "DIR/file-partial/alps.obi",
+          "before": "*/0    ",
+          "after": " "
+        },
+        {
+          "exited": true,
+          "answer": "DIR/file-partial/alps.obi"
+        }
+      ]
+    },
+    {
+      "name": "file-directory-preselect",
+      "states": [
+        {
+          "input": "DIR/file-directory-preselect/",
+          "before": "*/2    ",
+          "after": " \nsrc/\nREADME\n"
+        },
+        {
+          "input": "DIR/file-directory-preselect/s",
+          "before": "1/1    ",
+          "after": " \nsrc/\n"
+        },
+        {
+          "input": "DIR/file-directory-preselect/sr",
+          "before": "1/1    ",
+          "after": " \nsrc/\n"
+        },
+        {
+          "input": "DIR/file-directory-preselect/src",
+          "before": "1/1    ",
+          "after": " \nsrc/\n"
+        },
+        {
+          "input": "DIR/file-directory-preselect/src/",
+          "before": "*/2    ",
+          "after": " \nlib.rs\nmain.rs\n"
+        },
+        {
+          "input": "DIR/file-directory-preselect/src/",
+          "before": "1/2    ",
+          "after": " \nlib.rs\nmain.rs\n"
+        },
+        {
+          "exited": true,
+          "answer": "DIR/file-directory-preselect/src/lib.rs"
+        }
+      ]
+    },
+    {
+      "name": "file-orderless",
+      "states": [
+        {
+          "input": "DIR/file-orderless/",
+          "before": "*/4    ",
+          "after": " \nbeta/\nalps.org\nalpha.txt\nnotes.org\n"
+        },
+        {
+          "input": "DIR/file-orderless/o",
+          "before": "1/2    ",
+          "after": " \nalps.org\nnotes.org\n"
+        },
+        {
+          "input": "DIR/file-orderless/or",
+          "before": "1/2    ",
+          "after": " \nalps.org\nnotes.org\n"
+        },
+        {
+          "input": "DIR/file-orderless/org",
+          "before": "1/2    ",
+          "after": " \nalps.org\nnotes.org\n"
+        },
+        {
+          "exited": true,
+          "answer": "DIR/file-orderless/alps.org"
+        }
+      ]
+    }
+  ]
+}

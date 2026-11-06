@@ -1,0 +1,6 @@
+{
+  "name": "orderless",
+  "description": "A completion style matching space-separated components in any order, after orderless.el",
+  "e8": "0.3.1",
+  "requires": {}
+}
