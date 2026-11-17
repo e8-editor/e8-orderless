@@ -1,0 +1,43 @@
+orderless NEWS -- history of user-visible changes.
+
+This is the news of e8-orderless, the E8 port of orderless.  'C-h P'
+shows it under the package's description.
+
+
+* Changes in orderless 0.1.0
+
+This is the first release, a port of orderless 1.5.  It needs E8 0.3.1
+or newer.
+
+** The 'orderless' completion style matches words in any order.
+The input is split at spaces and a candidate must match every part, so
+"fil ot" finds find-file-other-window.  Add it to 'completion-styles'.
+
+** Each component matches literally or as an Emacs regexp.
+'orderless-matching-styles' chooses how, from 'orderless-literal',
+'orderless-regexp', 'orderless-literal-prefix', 'orderless-flex',
+'orderless-initialism', 'orderless-prefixes' and
+'orderless-without-literal'.
+
+** A character at a component's start or end changes how it matches.
+'!' excludes, ',' matches as an initialism, '=' literally, '^' as a
+literal prefix, '~' as flex and '&' against the annotation.
+'orderless-affix-dispatch-alist' holds them.
+
+** 'orderless-style-dispatchers' choose a component's styles.
+
+** Input in lower case ignores case.
+Input with an upper case letter matches case, unless
+'orderless-smart-case' is off.
+
+** A backslash before a space makes the space part of a component.
+'orderless-component-separator' says what splits the input, a regexp
+or a function.
+
+** Matches are highlighted with a face for each component in turn.
+'orderless-match-faces' lists them, 'orderless-match-face-0' to
+'orderless-match-face-3'.
+
+** Other packages can import orderless's filter and matching styles.
+The module 'orderless' exports 'orderlessFilter', 'orderlessCompile'
+and 'orderlessHighlightMatches'.
